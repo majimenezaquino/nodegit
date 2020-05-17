@@ -8,7 +8,6 @@ on:
 jobs:
   config_and_set:
     runs-on: ubuntu-latest
-    
     steps:
     - name: CheckOut Code
       uses: actions/checkout@v1
@@ -17,6 +16,7 @@ jobs:
     - name: Run test
       run: npm test
 jobs: 
+  runs-on: ubuntu-latest
   my_word2:
     steps:
       - name: Run app
