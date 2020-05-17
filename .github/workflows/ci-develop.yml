@@ -1,0 +1,21 @@
+name: Build & Publish Debug APK
+
+on:
+ push:
+  branches:
+   - develop
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: CheckOut Code
+      uses: actions/checkout@v1
+    - name: install despendicia
+      echo: Run this test
+      run: npm install
+    - name: Run test
+      run: npm test
+      
+    
