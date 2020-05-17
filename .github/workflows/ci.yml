@@ -1,7 +1,20 @@
-on: push
+name: Build & Publish Debug APK
+
+on:
+ push:
+  branches:
+   - master
+   
+jobs:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-        name: CI INSTALL DEV
-        run: npm install
-        name: Run test
-        run: npm test
+    - name: CheckOut Code
+      uses: actions/checkout@v1
+    - name: install despendicia
+      run: npm install
+    - name: Run test
+      run: npm test
+      
+    
