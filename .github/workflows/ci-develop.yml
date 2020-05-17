@@ -6,7 +6,7 @@ on:
    - 'develop'
    
 jobs:
-  build:
+  config_and_set:
     runs-on: ubuntu-latest
     
     steps:
@@ -16,5 +16,12 @@ jobs:
       run: npm install
     - name: Run test
       run: npm test
+jobs: 
+  my_word2:
+    steps:
+      - name: Run app
+        run: npm start
+
+
       
     
