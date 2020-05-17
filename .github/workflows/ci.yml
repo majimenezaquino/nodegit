@@ -1,9 +1,7 @@
-on:
-    push:
-        branches:
-            master:
-                jubs:
-                    name: CI INSTALL DEV
-                    run: npm install
-                    name: Run test
-                    run: npm test
+on: push
+    runs-on: ubuntu-latest
+    steps:
+        name: CI INSTALL DEV
+        run: npm install
+        name: Run test
+        run: npm test
